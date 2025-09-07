@@ -69,7 +69,7 @@ Prerequisites
 
 Java installed
 
-Docker and Docker Compose
+Docker 
 
 Maven / Gradle / NPM
 
@@ -79,9 +79,12 @@ Installation & Running
 
 Clone the repository:
 
-git clone []
+git clone [https://github.com/ankittankal/Fitness_AI-Microservice.git]
+
 cd [your-project-directory]
+
 Configure Environment Variables:
+
 Create a .env file in the root directory and add your credentials. Each service may have its own configuration file (application.properties or .yml).
 
 
@@ -107,14 +110,6 @@ Build the Services:
 Navigate into each microservice directory and run the build command. For a Maven project, it would be:
 
 mvn clean install
-
-Launch with Docker Compose:
-From the root directory, start all the services (including databases and Kafka).
-
-Bash
-
-docker-compose up --build -d
-This command will build the Docker images for each service and start them in detached mode.
 
 Verify:
 Check the Docker logs to ensure all containers are running without errors. You can access the Eureka dashboard at http://localhost:8761 to see if all services have registered successfully.
